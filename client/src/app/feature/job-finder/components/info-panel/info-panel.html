@@ -1,0 +1,30 @@
+<div class="info-panel-container">
+  <div class="applied-jobs-section">
+    <h2>Applied to jobs:</h2>
+    <ul>
+      @for (job of jobs() | appliedJobsPipe: true; track job.id ){
+      <li>
+        <img
+          [src]="job.companyLogo"
+          [alt]="job.companyName"
+          class="logo"
+          width="120"
+        />
+
+        <p>{{ job.position }}</p>
+
+        <p>{{ job.startingSalary | currency : "USD" : "symbol" : "1.0" }}</p>
+        <app-button [text]="'Cancel'" (btnClick)="cancelApplication(job.id)" />
+      </li>
+      }
+    </ul>
+  </div>
+  <div class="information-section">
+    <p>
+      Available jobs: <span>{{ numberOfTotalJobs() }}</span>
+    </p>
+    <p>
+      Applied jobs: <span>{{ numberOfAppliedJobs() }}</span>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,93 @@
+<div class="job-form-container">
+  <form [formGroup]="jobForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label>Company Name</label>
+      <input formControlName="companyName" placeholder="Name of the company" />
+    </div>
+
+    <div>
+      <label>Company Logo</label>
+      <input formControlName="companyLogo" placeholder="Company logo" />
+    </div>
+
+    <div>
+      <label>Position</label>
+      <input formControlName="position" placeholder="Job position" />
+    </div>
+
+    <div>
+      <label>Expires</label>
+      <input type="date" formControlName="expires" />
+    </div>
+
+    <div>
+      <label>Starting Salary</label>
+      <input type="number" formControlName="startingSalary" />
+    </div>
+
+    <div>
+      <label>Work Type</label>
+      <select formControlName="workType">
+        @for (type of workType; track $index) {
+        <option [value]="type">{{ type }}</option>
+        }
+      </select>
+    </div>
+
+    <div>
+      <label>Location</label>
+      <input formControlName="location" placeholder="Job Location" />
+    </div>
+
+    <div>
+      <label>Country</label>
+      <input formControlName="country" placeholder="United States" />
+    </div>
+
+    <div>
+      <label>Qualifications</label>
+      <textarea
+        rows="5"
+        formControlName="qualifications"
+        placeholder="Qualities required from the job applicants..."
+      ></textarea>
+    </div>
+
+    <div>
+      <label>Description</label>
+      <textarea
+        rows="5"
+        formControlName="description"
+        placeholder="Explaning the daily duties..."
+      ></textarea>
+    </div>
+
+    <div>
+      <label>Company Address</label>
+      <input
+        formControlName="companyAddress"
+        placeholder="Address of the company"
+      />
+    </div>
+
+    <div>
+      <label>Company Industry</label>
+      <input
+        formControlName="companyIndustry"
+        placeholder="Industry that the company specializes in..."
+      />
+    </div>
+
+    <div>
+      <label>Company Website</label>
+      <input
+        formControlName="companyWebsite"
+        placeholder="Website of the company"
+      />
+    </div>
+
+    <button type="submit" [disabled]="jobForm.invalid">
+      @if (editJob()) {Edit Job} @else {Add job}
+    </button>
+  </form>
+</div>

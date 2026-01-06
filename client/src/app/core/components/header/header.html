@@ -1,0 +1,29 @@
+<header class="task-header">
+  <h1>
+    <i class="fa-solid fa-shekel-sign"></i>
+    <a
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >JOB SEEKER</a
+    >
+  </h1>
+  <nav>
+    <ul>
+      <li>
+        <a
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Home</a
+        >
+      </li>
+      <li><a routerLink="/jobs" routerLinkActive="active">Jobs</a></li>
+      <li><a routerLink="/add-job" routerLinkActive="active">Add Job</a></li>
+      <li>
+        <a routerLink="/contact-us" routerLinkActive="active">Contact Us</a>
+      </li>
+      <li><a routerLink="/profile" routerLinkActive="active">Profile</a></li>
+    </ul>
+  </nav>
+</header>

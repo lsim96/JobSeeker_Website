@@ -1,0 +1,18 @@
+<div class="sort-container">
+  <span><strong>Sort By:</strong></span>
+  <div class="sort-btns">
+    <app-button (btnClick)="onSortClick()" text="Salary" />
+    <select (change)="onWorkTypeClick($event)" name="work-type" id="work-type">
+      <option value="Select">Pick an option</option>
+      <option value="REMOTE">Remote</option>
+      <option value="ON-SITE">On-Site</option>
+      <option value="HYBRID">Hybrid</option>
+    </select>
+  </div>
+</div>
+<ul>
+  @for(job of jobs(); track job.id) {
+  <li><app-job-card [job]="job" /></li>
+  }
+</ul>
+<app-info-panel />

@@ -1,0 +1,18 @@
+<div class="company-container">
+  <div class="company-card">
+    <div class="logo-container">
+      <img
+        [src]="selectedCompany().companyLogo"
+        [alt]="selectedCompany().companyName"
+        class="company-logo"
+        width="128"
+      />
+    </div>
+    <p>{{ selectedCompany().companyName }}</p>
+    <p>{{ selectedCompany().companyIndustry }}</p>
+    <p>{{ selectedCompany().companyAddress }}</p>
+    <a [href]="selectedCompany().companyWebsite" target="_blank">
+      {{ selectedCompany().companyWebsite }}
+    </a>
+  </div>
+</div>

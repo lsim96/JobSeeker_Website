@@ -1,0 +1,56 @@
+.media-container {
+  flex: 0 0 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(2, 6, 23, 0.08);
+  padding: 1.5rem;
+  gap: 1.5rem;
+  text-align: center;
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.5;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #0f172a;
+    font-weight: 600;
+    transition: color 0.2s ease, transform 0.1s ease;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: #3182ce;
+      transition: fill 0.2s ease;
+    }
+
+    &:hover {
+      color: #2563eb;
+      transform: translateY(-2px);
+
+      svg {
+        fill: #2563eb;
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}

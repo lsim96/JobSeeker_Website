@@ -1,0 +1,36 @@
+<div class="job-cards-container">
+  <div class="job-card">
+    <div class="job-header">
+      <img
+        (click)="onLogoClick()"
+        [src]="job().companyLogo"
+        [alt]="job().companyName"
+        class="job-logo"
+        width="120"
+      />
+    </div>
+    <div class="job-main-content">
+      <p><i class="fa-solid fa-clock"></i>Expiry Date: {{ job().expires }}</p>
+      <p>
+        <i class="fa-solid fa-money-bill"></i>Salary:
+        {{ job().startingSalary | currency : "USD" : "symbol" : "1.0" }}
+      </p>
+      <p><i class="fa-solid fa-building"></i>Work Type: {{ job().workType }}</p>
+    </div>
+    <div class="more-container" appToggleDetails [isInitiallyOpen]="false">
+      <h3>More Details 🔽</h3>
+      <div class="more-details">
+        <div class="more-content">
+          <p>Location: {{ job().location }}</p>
+          <p>Country: {{ job().country }}</p>
+          <p>Qualifications: {{ job().qualifications }}</p>
+          <p>Description: {{ job().description }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="controls">
+      <app-button (btnClick)="onJobApply()" [text]="'Apply'" />
+      <app-button (btnClick)="onEditClick()" [text]="'Edit'" />
+    </div>
+  </div>
+</div>

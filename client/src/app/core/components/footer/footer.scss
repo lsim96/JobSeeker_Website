@@ -1,0 +1,146 @@
+.footer-container {
+  background: linear-gradient(
+    135deg,
+    #00c853,
+    #007bff
+  ); // same as header but reversed
+  color: white;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  // Navigation section
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: white;
+      text-transform: uppercase;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0;
+      margin: 0;
+
+      li {
+        a {
+          color: white;
+          text-decoration: none;
+          font-size: 1rem;
+          padding: 6px 12px;
+          border-radius: 6px;
+          transition: all 0.3s ease;
+          position: relative;
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: #ffeb3b;
+            transition: width 0.3s ease;
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
+        }
+
+        .active {
+          background-color: #ffeb3b;
+          color: #2d3436;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  // Social media section
+  .media-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      svg {
+        width: 35px;
+        height: 35px;
+        fill: #ffeb3b;
+        margin-bottom: 0.4rem;
+        transition: fill 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+          fill: #fff;
+          transform: rotate(-10deg);
+        }
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  // Responsive design
+  @media (max-width: 768px) {
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+
+    .nav-container {
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+
+    .media-container {
+      gap: 1.5rem;
+
+      a svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
