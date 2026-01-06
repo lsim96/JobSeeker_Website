@@ -29,7 +29,6 @@ TypeScript: Type-safe backend development
 Express.js: Web application framework
 RESTful API: Clean API architecture
 
-📁 Project Structure
 JobSeeker_Website/
 ├── client/                # Angular frontend application
 │   ├── src/              
