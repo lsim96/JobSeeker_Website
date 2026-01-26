@@ -28,20 +28,3 @@ Node.js: JavaScript runtime for server-side logic
 TypeScript: Type-safe backend development
 Express.js: Web application framework
 RESTful API: Clean API architecture
-
-JobSeeker_Website/
-├── client/                # Angular frontend application
-│   ├── src/              
-│   │   ├── app/          # Angular components and modules
-│   │   ├── assets/       # Static assets
-│   │   ├── environments/ # Environment configurations
-│   │   └── styles/       # Global SCSS stylesheets
-│   ├── angular.json      # Angular CLI configuration
-│   └── package.json
-├── server/               # Node.js backend application
-│   ├── src/              # Server source files
-│   │   ├── routes/       # API routes
-│   │   ├── controllers/  # Business logic
-│   │   └── models/       # Data models
-│   └── package.json
-└── README.md
