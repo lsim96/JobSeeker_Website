@@ -3,7 +3,7 @@ A personal project showcasing a full-stack web application designed to connect j
 
 Note: This is a personal learning project and is not currently deployed or in active use. (IN PROGRESS)
 
-🚀 Features
+-  Features
 
 Job Listing Management: Browse and search through available job postings
 User Authentication: Secure login and registration system
@@ -12,7 +12,7 @@ Real-time Search: Dynamic job search functionality
 User Profiles: Personalized user accounts for job seekers
 Application Tracking: Keep track of submitted job applications
 
-🛠️ Tech Stack
+- Tech Stack
 Frontend (Client)
 
 Angular: Modern TypeScript-based web framework
